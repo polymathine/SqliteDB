@@ -24,6 +24,7 @@
 		285A18F7192233EE005CE96A /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A18F6192233EE005CE96A /* Database.m */; };
 		285A193E19226CE0005CE96A /* LibraryPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A193D19226CE0005CE96A /* LibraryPath.m */; };
 		285A194019226D11005CE96A /* LibraryPathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A193F19226D11005CE96A /* LibraryPathTest.m */; };
+		28789AD81922770000945869 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28789AD71922770000945869 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		285A193C19226CE0005CE96A /* LibraryPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibraryPath.h; path = /Users/abby/SqliteDB/Database/Model/LibraryPath.h; sourceTree = "<absolute>"; };
 		285A193D19226CE0005CE96A /* LibraryPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LibraryPath.m; path = /Users/abby/SqliteDB/Database/Model/LibraryPath.m; sourceTree = "<absolute>"; };
 		285A193F19226D11005CE96A /* LibraryPathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryPathTest.m; sourceTree = "<group>"; };
+		28789AD71922770000945869 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28789AD81922770000945869 /* libsqlite3.0.dylib in Frameworks */,
 				285A18BE19222389005CE96A /* CoreGraphics.framework in Frameworks */,
 				285A18C019222389005CE96A /* UIKit.framework in Frameworks */,
 				285A18BC19222389005CE96A /* Foundation.framework in Frameworks */,
@@ -109,6 +112,7 @@
 		285A18BA19222389005CE96A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28789AD71922770000945869 /* libsqlite3.0.dylib */,
 				285A18BB19222389005CE96A /* Foundation.framework */,
 				285A18BD19222389005CE96A /* CoreGraphics.framework */,
 				285A18BF19222389005CE96A /* UIKit.framework */,

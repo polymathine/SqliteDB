@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Database : NSObject
 
+@interface Database : NSObject
+-(int)openSqliteDB;
 
 @end

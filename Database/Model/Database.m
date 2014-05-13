@@ -7,7 +7,26 @@
 //
 
 #import "Database.h"
+#import "LibraryPath.h"
+#import <sqlite3.h>
+
+
+@interface Database ()
+@property (nonatomic) sqlite3 *mainDB;
+@end
 
 @implementation Database
+
+-(int)openSqliteDB
+{
+    NSString *targetPath = [LibraryPath getTargetPathTo:@"MainDB.sqlite"];
+    const char *dbPath = [targetPath UTF8String];
+    sqlite3 *theDatabase;
+    
+    int outcome = sqlite3_open(dbPath, &theDatabase);
+    //A positive result: SQLITE_OK = O
+    
+    return outcome;
+}
 
 @end
