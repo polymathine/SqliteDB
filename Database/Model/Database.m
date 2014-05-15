@@ -8,8 +8,6 @@
 
 #import "Database.h"
 #import "LibraryPath.h"
-#import <sqlite3.h>
-
 
 @interface Database ()
 @property (nonatomic) sqlite3 *mainDB;
@@ -17,16 +15,23 @@
 
 @implementation Database
 
--(int)openSqliteDB
+-(int)openSqliteDB:(sqlite3*)theDatabase at:(NSString*)targetPath
 {
-    NSString *targetPath = [LibraryPath getTargetPathTo:@"MainDB.sqlite"];
     const char *dbPath = [targetPath UTF8String];
-    sqlite3 *theDatabase;
     
     int outcome = sqlite3_open(dbPath, &theDatabase);
     //A positive result: SQLITE_OK = O
     
     return outcome;
 }
+
+-(int)closeSqliteDB:(sqlite3*)theDatabase
+{
+    int outcome = sqlite3_close(theDatabase);
+    NSLog(@"Database Connection  NOT Closed! %s", sqlite3_errmsg(theDatabase));
+    return outcome;
+}
+
+
 
 @end

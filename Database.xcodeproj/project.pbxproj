@@ -25,6 +25,9 @@
 		285A193E19226CE0005CE96A /* LibraryPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A193D19226CE0005CE96A /* LibraryPath.m */; };
 		285A194019226D11005CE96A /* LibraryPathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A193F19226D11005CE96A /* LibraryPathTest.m */; };
 		28789AD81922770000945869 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28789AD71922770000945869 /* libsqlite3.0.dylib */; };
+		28A8BF8A1924C073007DA022 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF891924C073007DA022 /* Singleton.m */; };
+		28A8BF8C1924C12C007DA022 /* SingletonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF8B1924C12C007DA022 /* SingletonTest.m */; };
+		28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9119252A40007DA022 /* DBSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,11 @@
 		285A193D19226CE0005CE96A /* LibraryPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LibraryPath.m; path = /Users/abby/SqliteDB/Database/Model/LibraryPath.m; sourceTree = "<absolute>"; };
 		285A193F19226D11005CE96A /* LibraryPathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryPathTest.m; sourceTree = "<group>"; };
 		28789AD71922770000945869 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		28A8BF881924C073007DA022 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = Database/Model/Singleton.h; sourceTree = SOURCE_ROOT; };
+		28A8BF891924C073007DA022 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Singleton.m; path = Database/Model/Singleton.m; sourceTree = SOURCE_ROOT; };
+		28A8BF8B1924C12C007DA022 /* SingletonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonTest.m; sourceTree = "<group>"; };
+		28A8BF9019252A40007DA022 /* DBSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSingleton.h; path = Database/Model/DBSingleton.h; sourceTree = SOURCE_ROOT; };
+		28A8BF9119252A40007DA022 /* DBSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSingleton.m; path = Database/Model/DBSingleton.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 				285A18F319222565005CE96A /* DatabaseTest.m */,
 				285A193F19226D11005CE96A /* LibraryPathTest.m */,
 				285A18E119222389005CE96A /* Supporting Files */,
+				28A8BF8B1924C12C007DA022 /* SingletonTest.m */,
 			);
 			path = DatabaseTests;
 			sourceTree = "<group>";
@@ -170,8 +179,12 @@
 			children = (
 				285A18F5192233EE005CE96A /* Database.h */,
 				285A18F6192233EE005CE96A /* Database.m */,
+				28A8BF881924C073007DA022 /* Singleton.h */,
+				28A8BF891924C073007DA022 /* Singleton.m */,
 				285A193C19226CE0005CE96A /* LibraryPath.h */,
 				285A193D19226CE0005CE96A /* LibraryPath.m */,
+				28A8BF9019252A40007DA022 /* DBSingleton.h */,
+				28A8BF9119252A40007DA022 /* DBSingleton.m */,
 			);
 			name = Model;
 			path = /Users/abby/Database/Database/Model;
@@ -293,9 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */,
 				285A18D219222389005CE96A /* DbViewController.m in Sources */,
 				285A193E19226CE0005CE96A /* LibraryPath.m in Sources */,
 				285A18CC19222389005CE96A /* DbAppDelegate.m in Sources */,
+				28A8BF8A1924C073007DA022 /* Singleton.m in Sources */,
 				285A18F7192233EE005CE96A /* Database.m in Sources */,
 				285A18C819222389005CE96A /* main.m in Sources */,
 			);
@@ -306,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				285A194019226D11005CE96A /* LibraryPathTest.m in Sources */,
+				28A8BF8C1924C12C007DA022 /* SingletonTest.m in Sources */,
 				285A18F419222565005CE96A /* DatabaseTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

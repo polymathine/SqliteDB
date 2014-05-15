@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <sqlite3.h>
 
 
 @interface Database : NSObject
--(int)openSqliteDB;
+-(int)openSqliteDB:(sqlite3*)theDatabase at:(NSString*)targetPath;
+-(int)closeSqliteDB:(sqlite3*)theDatabase;
+
+
 
 @end

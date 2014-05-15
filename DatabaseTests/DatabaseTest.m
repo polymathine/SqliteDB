@@ -12,8 +12,8 @@
 #import "LibraryPath.h"
 
 @interface DatabaseTest : XCTestCase
-@property (nonatomic, retain) NSString *targetPath;
 @property (nonatomic, retain) Database *database;
+
 
 @end
 
@@ -23,12 +23,11 @@
 {
     [super setUp];
     self.database = [[Database alloc] init];
-    self.targetPath = [LibraryPath getTargetPathTo:@"boo"];
+
 }
 
 - (void)tearDown
 {
-    self.targetPath = nil;
     self.database = nil;
     [super tearDown];
 }
@@ -41,14 +40,48 @@
 -(void)testSqliteDatabaseOpened
 {
     //given
+    sqlite3 *databaseSQ;
+    NSString *targetPath = [LibraryPath getTargetPathTo:@"boo.sqlite"];
     
     //when
-    int outcome = [self.database openSqliteDB];
+    int outcome = [self.database openSqliteDB:databaseSQ at:targetPath];
     
     //then
     XCTAssertEqual(0, outcome, @"sqlite database not opened correctly");
 }
 
+
+-(void)testSqliteDatabaseCreatedAtPath
+{
+    //given
+    sqlite3 *databaseSQ;
+    NSString *targetPath = [LibraryPath getTargetPathTo:@"boo.sqlite"];
+    
+    //when
+    [self.database openSqliteDB:databaseSQ at:targetPath];
+    BOOL file = [[NSFileManager defaultManager] fileExistsAtPath:targetPath];
+    
+    //then
+    XCTAssertEqual(1, file, @"sqlite database not created at target path");
+}
+
+/*-(void)testSqliteDatabaseClosed
+{
+    //given
+    NSString *targetPath = [LibraryPath getTargetPathTo:@"boo.sqlite"];
+    sqlite3 *databaseSQ;
+    int open = [self.database openSqliteDB:databaseSQ at:targetPath];
+
+    NSLog(@"open = %d", open);
+    //when
+    int outcome = [self.database closeSqliteDB:self.mainDB];
+    
+    
+    //then
+    XCTAssertEqual(0, outcome, @"sqlite database not closed correctly");
+    
+}
+*/
 
 
 @end
