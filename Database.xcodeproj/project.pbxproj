@@ -28,6 +28,8 @@
 		28A8BF8A1924C073007DA022 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF891924C073007DA022 /* Singleton.m */; };
 		28A8BF8C1924C12C007DA022 /* SingletonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF8B1924C12C007DA022 /* SingletonTest.m */; };
 		28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9119252A40007DA022 /* DBSingleton.m */; };
+		28A8BF9419252D98007DA022 /* QuerySqliteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9319252D98007DA022 /* QuerySqliteTest.m */; };
+		28A8BF9719252DC1007DA022 /* QuerySqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9619252DC1007DA022 /* QuerySqlite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,9 @@
 		28A8BF8B1924C12C007DA022 /* SingletonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonTest.m; sourceTree = "<group>"; };
 		28A8BF9019252A40007DA022 /* DBSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSingleton.h; path = Database/Model/DBSingleton.h; sourceTree = SOURCE_ROOT; };
 		28A8BF9119252A40007DA022 /* DBSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSingleton.m; path = Database/Model/DBSingleton.m; sourceTree = SOURCE_ROOT; };
+		28A8BF9319252D98007DA022 /* QuerySqliteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySqliteTest.m; sourceTree = "<group>"; };
+		28A8BF9519252DC1007DA022 /* QuerySqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuerySqlite.h; path = Database/Model/QuerySqlite.h; sourceTree = SOURCE_ROOT; };
+		28A8BF9619252DC1007DA022 /* QuerySqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuerySqlite.m; path = Database/Model/QuerySqlite.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				285A18F319222565005CE96A /* DatabaseTest.m */,
+				28A8BF9319252D98007DA022 /* QuerySqliteTest.m */,
 				285A193F19226D11005CE96A /* LibraryPathTest.m */,
 				285A18E119222389005CE96A /* Supporting Files */,
 				28A8BF8B1924C12C007DA022 /* SingletonTest.m */,
@@ -185,6 +191,8 @@
 				285A193D19226CE0005CE96A /* LibraryPath.m */,
 				28A8BF9019252A40007DA022 /* DBSingleton.h */,
 				28A8BF9119252A40007DA022 /* DBSingleton.m */,
+				28A8BF9519252DC1007DA022 /* QuerySqlite.h */,
+				28A8BF9619252DC1007DA022 /* QuerySqlite.m */,
 			);
 			name = Model;
 			path = /Users/abby/Database/Database/Model;
@@ -306,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A8BF9719252DC1007DA022 /* QuerySqlite.m in Sources */,
 				28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */,
 				285A18D219222389005CE96A /* DbViewController.m in Sources */,
 				285A193E19226CE0005CE96A /* LibraryPath.m in Sources */,
@@ -320,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A8BF9419252D98007DA022 /* QuerySqliteTest.m in Sources */,
 				285A194019226D11005CE96A /* LibraryPathTest.m in Sources */,
 				28A8BF8C1924C12C007DA022 /* SingletonTest.m in Sources */,
 				285A18F419222565005CE96A /* DatabaseTest.m in Sources */,
