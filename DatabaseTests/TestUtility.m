@@ -7,7 +7,7 @@
 //
 
 #import "TestUtility.h"
-
+#import <stdlib.h>
 
 @implementation TestUtility
 
@@ -27,6 +27,19 @@
 }
 
 
++(NSData*)create2kbRandomNSData
+{
+    int twoKb           = 2097;
+    NSMutableData* theData = [NSMutableData dataWithCapacity:twoKb];
+    for( unsigned int i = 0 ; i < twoKb/4 ; ++i )
+    {
+        u_int32_t randomBits = arc4random();
+        [theData appendBytes:(void*)&randomBits length:4];
+    }
+    return theData;
+}
+
+
 +(Action*)getDummyAction
 {
     Action *action = [[Action alloc] initType:@"foo" Timestamp:@"fooTime" WorkerID:@"fooWorker" SupervisorID:@"fooSupervisor"];
@@ -34,7 +47,12 @@
     return action;
 }
 
-
++(Worker*)getDummyWorker
+{
+    Worker *worker = [[Worker alloc] initWorkerNameFirst:@"foo" Mother:@"fooMom" Father:@"fooDad" RUT:@"fooRut" Transport:@"fooTrans" andPhoto:[self.class create2kbRandomNSData]];
+    
+    return worker;
+}
 
 +(NSString*)loadFixture:(NSString *)name ofType:(NSString*)filetype
 {

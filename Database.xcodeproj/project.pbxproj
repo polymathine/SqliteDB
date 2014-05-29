@@ -26,7 +26,6 @@
 		285A193E19226CE0005CE96A /* LibraryPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A193D19226CE0005CE96A /* LibraryPath.m */; };
 		285A194019226D11005CE96A /* LibraryPathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A193F19226D11005CE96A /* LibraryPathTest.m */; };
 		286A5292193637D30088C445 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28789AD71922770000945869 /* libsqlite3.0.dylib */; };
-		286A5294193651C20088C445 /* testDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 286A5293193651C20088C445 /* testDB.sqlite */; };
 		286A5297193664F40088C445 /* ActionQueries.m in Sources */ = {isa = PBXBuildFile; fileRef = 286A5296193664F40088C445 /* ActionQueries.m */; };
 		286A529A1936666B0088C445 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 286A52991936666B0088C445 /* Action.m */; };
 		28789AD81922770000945869 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28789AD71922770000945869 /* libsqlite3.0.dylib */; };
@@ -36,6 +35,10 @@
 		28A8BF9419252D98007DA022 /* QuerySqliteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9319252D98007DA022 /* QuerySqliteTest.m */; };
 		28A8BF9719252DC1007DA022 /* QuerySqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9619252DC1007DA022 /* QuerySqlite.m */; };
 		28E1908F19373F530083B9C1 /* TestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E1908E19373F530083B9C1 /* TestUtility.m */; };
+		28E19095193781530083B9C1 /* WorkerQueriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E19094193781530083B9C1 /* WorkerQueriesTest.m */; };
+		28E19098193781E70083B9C1 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E19097193781E70083B9C1 /* Worker.m */; };
+		28E1909B193784300083B9C1 /* WorkerQueries.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E1909A193784300083B9C1 /* WorkerQueries.m */; };
+		28E190A01937888C0083B9C1 /* testDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 28E1909F1937888C0083B9C1 /* testDB.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +77,6 @@
 		285A193C19226CE0005CE96A /* LibraryPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibraryPath.h; path = /Users/abby/SqliteDB/Database/Model/LibraryPath.h; sourceTree = "<absolute>"; };
 		285A193D19226CE0005CE96A /* LibraryPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LibraryPath.m; path = /Users/abby/SqliteDB/Database/Model/LibraryPath.m; sourceTree = "<absolute>"; };
 		285A193F19226D11005CE96A /* LibraryPathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryPathTest.m; sourceTree = "<group>"; };
-		286A5293193651C20088C445 /* testDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = testDB.sqlite; sourceTree = "<group>"; };
 		286A5295193664F40088C445 /* ActionQueries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionQueries.h; path = Database/Model/ActionQueries.h; sourceTree = SOURCE_ROOT; };
 		286A5296193664F40088C445 /* ActionQueries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionQueries.m; path = Database/Model/ActionQueries.m; sourceTree = SOURCE_ROOT; };
 		286A52981936666B0088C445 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Action.h; path = Database/Model/Action.h; sourceTree = SOURCE_ROOT; };
@@ -90,6 +92,12 @@
 		28A8BF9619252DC1007DA022 /* QuerySqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuerySqlite.m; path = Database/Model/QuerySqlite.m; sourceTree = SOURCE_ROOT; };
 		28E1908D19373F530083B9C1 /* TestUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtility.h; sourceTree = "<group>"; };
 		28E1908E19373F530083B9C1 /* TestUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUtility.m; sourceTree = "<group>"; };
+		28E19094193781530083B9C1 /* WorkerQueriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerQueriesTest.m; sourceTree = "<group>"; };
+		28E19096193781E70083B9C1 /* Worker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Worker.h; path = Database/Model/Worker.h; sourceTree = SOURCE_ROOT; };
+		28E19097193781E70083B9C1 /* Worker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Worker.m; path = Database/Model/Worker.m; sourceTree = SOURCE_ROOT; };
+		28E19099193784300083B9C1 /* WorkerQueries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkerQueries.h; path = Database/Model/WorkerQueries.h; sourceTree = SOURCE_ROOT; };
+		28E1909A193784300083B9C1 /* WorkerQueries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkerQueries.m; path = Database/Model/WorkerQueries.m; sourceTree = SOURCE_ROOT; };
+		28E1909F1937888C0083B9C1 /* testDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = testDB.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +171,8 @@
 		285A18C219222389005CE96A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28A8BF9019252A40007DA022 /* DBSingleton.h */,
+				28A8BF9119252A40007DA022 /* DBSingleton.m */,
 				285A18D319222389005CE96A /* Images.xcassets */,
 				285A18CA19222389005CE96A /* DbAppDelegate.h */,
 				285A18CB19222389005CE96A /* DbAppDelegate.m */,
@@ -178,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				281C5F69193628B400186376 /* ActionQueriesTest.m */,
+				28E19094193781530083B9C1 /* WorkerQueriesTest.m */,
 				285A18E119222389005CE96A /* Supporting Files */,
 				285A18F319222565005CE96A /* DatabaseTest.m */,
 				28A8BF9319252D98007DA022 /* QuerySqliteTest.m */,
@@ -192,7 +203,7 @@
 		285A18E119222389005CE96A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				286A5293193651C20088C445 /* testDB.sqlite */,
+				28E1909F1937888C0083B9C1 /* testDB.sqlite */,
 				285A18E219222389005CE96A /* DatabaseTests-Info.plist */,
 				285A18E319222389005CE96A /* InfoPlist.strings */,
 			);
@@ -202,20 +213,10 @@
 		285A18F0192223D0005CE96A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				286A5295193664F40088C445 /* ActionQueries.h */,
-				286A5296193664F40088C445 /* ActionQueries.m */,
-				286A52981936666B0088C445 /* Action.h */,
-				286A52991936666B0088C445 /* Action.m */,
-				285A18F5192233EE005CE96A /* Database.h */,
-				285A18F6192233EE005CE96A /* Database.m */,
-				28A8BF881924C073007DA022 /* Singleton.h */,
-				28A8BF891924C073007DA022 /* Singleton.m */,
-				285A193C19226CE0005CE96A /* LibraryPath.h */,
-				285A193D19226CE0005CE96A /* LibraryPath.m */,
-				28A8BF9519252DC1007DA022 /* QuerySqlite.h */,
-				28A8BF9619252DC1007DA022 /* QuerySqlite.m */,
-				28A8BF9019252A40007DA022 /* DBSingleton.h */,
-				28A8BF9119252A40007DA022 /* DBSingleton.m */,
+				28E1909119377EB10083B9C1 /* Action */,
+				28E1909219377ED10083B9C1 /* Database */,
+				28E1909319377EF00083B9C1 /* Sqlite */,
+				28E1909C193784370083B9C1 /* Worker */,
 			);
 			name = Model;
 			path = /Users/abby/Database/Database/Model;
@@ -238,6 +239,50 @@
 			name = Controller;
 			path = /Users/abby/Database/Database/Controller;
 			sourceTree = "<absolute>";
+		};
+		28E1909119377EB10083B9C1 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				286A5295193664F40088C445 /* ActionQueries.h */,
+				286A5296193664F40088C445 /* ActionQueries.m */,
+				286A52981936666B0088C445 /* Action.h */,
+				286A52991936666B0088C445 /* Action.m */,
+			);
+			name = Action;
+			sourceTree = "<group>";
+		};
+		28E1909219377ED10083B9C1 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				285A193C19226CE0005CE96A /* LibraryPath.h */,
+				285A193D19226CE0005CE96A /* LibraryPath.m */,
+				28A8BF881924C073007DA022 /* Singleton.h */,
+				28A8BF891924C073007DA022 /* Singleton.m */,
+				285A18F5192233EE005CE96A /* Database.h */,
+				285A18F6192233EE005CE96A /* Database.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		28E1909319377EF00083B9C1 /* Sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				28A8BF9519252DC1007DA022 /* QuerySqlite.h */,
+				28A8BF9619252DC1007DA022 /* QuerySqlite.m */,
+			);
+			name = Sqlite;
+			sourceTree = "<group>";
+		};
+		28E1909C193784370083B9C1 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				28E19096193781E70083B9C1 /* Worker.h */,
+				28E19097193781E70083B9C1 /* Worker.m */,
+				28E19099193784300083B9C1 /* WorkerQueries.h */,
+				28E1909A193784300083B9C1 /* WorkerQueries.m */,
+			);
+			name = Worker;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -327,7 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				285A18E519222389005CE96A /* InfoPlist.strings in Resources */,
-				286A5294193651C20088C445 /* testDB.sqlite in Resources */,
+				28E190A01937888C0083B9C1 /* testDB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,10 +385,12 @@
 			files = (
 				28A8BF9719252DC1007DA022 /* QuerySqlite.m in Sources */,
 				28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */,
+				28E1909B193784300083B9C1 /* WorkerQueries.m in Sources */,
 				285A18D219222389005CE96A /* DbViewController.m in Sources */,
 				285A193E19226CE0005CE96A /* LibraryPath.m in Sources */,
 				285A18CC19222389005CE96A /* DbAppDelegate.m in Sources */,
 				286A5297193664F40088C445 /* ActionQueries.m in Sources */,
+				28E19098193781E70083B9C1 /* Worker.m in Sources */,
 				28A8BF8A1924C073007DA022 /* Singleton.m in Sources */,
 				286A529A1936666B0088C445 /* Action.m in Sources */,
 				285A18F7192233EE005CE96A /* Database.m in Sources */,
@@ -360,6 +407,7 @@
 				285A194019226D11005CE96A /* LibraryPathTest.m in Sources */,
 				28A8BF8C1924C12C007DA022 /* SingletonTest.m in Sources */,
 				281C5F6A193628B400186376 /* ActionQueriesTest.m in Sources */,
+				28E19095193781530083B9C1 /* WorkerQueriesTest.m in Sources */,
 				285A18F419222565005CE96A /* DatabaseTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 #import "Action.h"
+#import "Worker.h"
 
 @interface TestUtility : NSObject
 
-+ (sqlite3*)getDummyDB;
++(sqlite3*)getDummyDB;
 +(void)closeTestDB:(sqlite3*)testDB;
 +(Action*)getDummyAction;
++(Worker*)getDummyWorker;
++(NSData*)create2kbRandomNSData;
 
 @end

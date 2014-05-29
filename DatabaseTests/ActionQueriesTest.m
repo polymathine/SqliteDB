@@ -23,7 +23,7 @@
 {
     [super setUp];
     self.testDB = [TestUtility getDummyDB];
-    self.getQuery = [NSString stringWithFormat:@"SELECT type, timestamp, worker_id, supervisor_id FROM action"];
+    self.getQuery = [NSString stringWithFormat:@"SELECT type, timestamp, worker_rut, supervisor_rut FROM action"];
 }
 
 - (void)tearDown
@@ -80,12 +80,28 @@
     [ActionQueries addAction:actionTest toDatabase:self.testDB];
     
     //when
-    actionOutcome = [ActionQueries getActionFromDatabase:self.testDB];
+    actionOutcome = [[ActionQueries getActionsFromDatabase:self.testDB] objectAtIndex:0];
     
     //then
     XCTAssertEqualObjects([actionTest worker_id], [actionOutcome worker_id], @"action not retrieved from sqlite table correctly");
     XCTAssertEqualObjects([actionTest type_act], [actionOutcome type_act], @"action not retrieved from sqlite table correctly");
     XCTAssertEqualObjects([actionTest timestamp_act], [actionOutcome timestamp_act], @"action not retrieved from sqlite table correctly");
+    
+}
+
+-(void)testTwoActionsGotFromDatabaseSuccesfully
+{
+    //given
+    Action *action1 = [TestUtility getDummyAction];
+    Action *action2 = [TestUtility getDummyAction];
+    
+    //when
+    [ActionQueries addAction:action1 toDatabase:self.testDB];
+    [ActionQueries addAction:action2 toDatabase:self.testDB];
+    
+    //then
+    NSArray *outcomes = [ActionQueries getActionsFromDatabase:self.testDB];
+    XCTAssertEqual([outcomes count], 2, @"action not retrieved from sqlite table correctly");
     
 }
 

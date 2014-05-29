@@ -18,5 +18,5 @@
 
 @interface ActionQueries : NSObject
 +(void)addAction:(Action*)action toDatabase:(sqlite3*)database;
-+(Action*)getActionFromDatabase:(sqlite3*)database;
++(NSArray*)getActionsFromDatabase:(sqlite3*)database;
 @end
