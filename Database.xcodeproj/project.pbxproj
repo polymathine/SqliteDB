@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281C5F6A193628B400186376 /* ActionQueriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C5F69193628B400186376 /* ActionQueriesTest.m */; };
 		285A18BC19222389005CE96A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A18BB19222389005CE96A /* Foundation.framework */; };
 		285A18BE19222389005CE96A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A18BD19222389005CE96A /* CoreGraphics.framework */; };
 		285A18C019222389005CE96A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A18BF19222389005CE96A /* UIKit.framework */; };
@@ -24,12 +25,17 @@
 		285A18F7192233EE005CE96A /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A18F6192233EE005CE96A /* Database.m */; };
 		285A193E19226CE0005CE96A /* LibraryPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A193D19226CE0005CE96A /* LibraryPath.m */; };
 		285A194019226D11005CE96A /* LibraryPathTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 285A193F19226D11005CE96A /* LibraryPathTest.m */; };
+		286A5292193637D30088C445 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28789AD71922770000945869 /* libsqlite3.0.dylib */; };
+		286A5294193651C20088C445 /* testDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 286A5293193651C20088C445 /* testDB.sqlite */; };
+		286A5297193664F40088C445 /* ActionQueries.m in Sources */ = {isa = PBXBuildFile; fileRef = 286A5296193664F40088C445 /* ActionQueries.m */; };
+		286A529A1936666B0088C445 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 286A52991936666B0088C445 /* Action.m */; };
 		28789AD81922770000945869 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28789AD71922770000945869 /* libsqlite3.0.dylib */; };
 		28A8BF8A1924C073007DA022 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF891924C073007DA022 /* Singleton.m */; };
 		28A8BF8C1924C12C007DA022 /* SingletonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF8B1924C12C007DA022 /* SingletonTest.m */; };
 		28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9119252A40007DA022 /* DBSingleton.m */; };
 		28A8BF9419252D98007DA022 /* QuerySqliteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9319252D98007DA022 /* QuerySqliteTest.m */; };
 		28A8BF9719252DC1007DA022 /* QuerySqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9619252DC1007DA022 /* QuerySqlite.m */; };
+		28E1908F19373F530083B9C1 /* TestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E1908E19373F530083B9C1 /* TestUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		281C5F69193628B400186376 /* ActionQueriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionQueriesTest.m; sourceTree = "<group>"; };
 		285A18B819222389005CE96A /* Database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Database.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		285A18BB19222389005CE96A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		285A18BD19222389005CE96A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,6 +74,11 @@
 		285A193C19226CE0005CE96A /* LibraryPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibraryPath.h; path = /Users/abby/SqliteDB/Database/Model/LibraryPath.h; sourceTree = "<absolute>"; };
 		285A193D19226CE0005CE96A /* LibraryPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LibraryPath.m; path = /Users/abby/SqliteDB/Database/Model/LibraryPath.m; sourceTree = "<absolute>"; };
 		285A193F19226D11005CE96A /* LibraryPathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryPathTest.m; sourceTree = "<group>"; };
+		286A5293193651C20088C445 /* testDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = testDB.sqlite; sourceTree = "<group>"; };
+		286A5295193664F40088C445 /* ActionQueries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionQueries.h; path = Database/Model/ActionQueries.h; sourceTree = SOURCE_ROOT; };
+		286A5296193664F40088C445 /* ActionQueries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionQueries.m; path = Database/Model/ActionQueries.m; sourceTree = SOURCE_ROOT; };
+		286A52981936666B0088C445 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Action.h; path = Database/Model/Action.h; sourceTree = SOURCE_ROOT; };
+		286A52991936666B0088C445 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Action.m; path = Database/Model/Action.m; sourceTree = SOURCE_ROOT; };
 		28789AD71922770000945869 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		28A8BF881924C073007DA022 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = Database/Model/Singleton.h; sourceTree = SOURCE_ROOT; };
 		28A8BF891924C073007DA022 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Singleton.m; path = Database/Model/Singleton.m; sourceTree = SOURCE_ROOT; };
@@ -76,6 +88,8 @@
 		28A8BF9319252D98007DA022 /* QuerySqliteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySqliteTest.m; sourceTree = "<group>"; };
 		28A8BF9519252DC1007DA022 /* QuerySqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuerySqlite.h; path = Database/Model/QuerySqlite.h; sourceTree = SOURCE_ROOT; };
 		28A8BF9619252DC1007DA022 /* QuerySqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuerySqlite.m; path = Database/Model/QuerySqlite.m; sourceTree = SOURCE_ROOT; };
+		28E1908D19373F530083B9C1 /* TestUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtility.h; sourceTree = "<group>"; };
+		28E1908E19373F530083B9C1 /* TestUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +97,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28789AD81922770000945869 /* libsqlite3.0.dylib in Frameworks */,
 				285A18BE19222389005CE96A /* CoreGraphics.framework in Frameworks */,
 				285A18C019222389005CE96A /* UIKit.framework in Frameworks */,
 				285A18BC19222389005CE96A /* Foundation.framework in Frameworks */,
+				28789AD81922770000945869 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286A5292193637D30088C445 /* libsqlite3.0.dylib in Frameworks */,
 				285A18DB19222389005CE96A /* XCTest.framework in Frameworks */,
 				285A18DD19222389005CE96A /* UIKit.framework in Frameworks */,
 				285A18DC19222389005CE96A /* Foundation.framework in Frameworks */,
@@ -162,10 +177,13 @@
 		285A18E019222389005CE96A /* DatabaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				281C5F69193628B400186376 /* ActionQueriesTest.m */,
+				285A18E119222389005CE96A /* Supporting Files */,
 				285A18F319222565005CE96A /* DatabaseTest.m */,
 				28A8BF9319252D98007DA022 /* QuerySqliteTest.m */,
+				28E1908D19373F530083B9C1 /* TestUtility.h */,
+				28E1908E19373F530083B9C1 /* TestUtility.m */,
 				285A193F19226D11005CE96A /* LibraryPathTest.m */,
-				285A18E119222389005CE96A /* Supporting Files */,
 				28A8BF8B1924C12C007DA022 /* SingletonTest.m */,
 			);
 			path = DatabaseTests;
@@ -174,6 +192,7 @@
 		285A18E119222389005CE96A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				286A5293193651C20088C445 /* testDB.sqlite */,
 				285A18E219222389005CE96A /* DatabaseTests-Info.plist */,
 				285A18E319222389005CE96A /* InfoPlist.strings */,
 			);
@@ -183,16 +202,20 @@
 		285A18F0192223D0005CE96A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				286A5295193664F40088C445 /* ActionQueries.h */,
+				286A5296193664F40088C445 /* ActionQueries.m */,
+				286A52981936666B0088C445 /* Action.h */,
+				286A52991936666B0088C445 /* Action.m */,
 				285A18F5192233EE005CE96A /* Database.h */,
 				285A18F6192233EE005CE96A /* Database.m */,
 				28A8BF881924C073007DA022 /* Singleton.h */,
 				28A8BF891924C073007DA022 /* Singleton.m */,
 				285A193C19226CE0005CE96A /* LibraryPath.h */,
 				285A193D19226CE0005CE96A /* LibraryPath.m */,
-				28A8BF9019252A40007DA022 /* DBSingleton.h */,
-				28A8BF9119252A40007DA022 /* DBSingleton.m */,
 				28A8BF9519252DC1007DA022 /* QuerySqlite.h */,
 				28A8BF9619252DC1007DA022 /* QuerySqlite.m */,
+				28A8BF9019252A40007DA022 /* DBSingleton.h */,
+				28A8BF9119252A40007DA022 /* DBSingleton.m */,
 			);
 			name = Model;
 			path = /Users/abby/Database/Database/Model;
@@ -304,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				285A18E519222389005CE96A /* InfoPlist.strings in Resources */,
+				286A5294193651C20088C445 /* testDB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +343,9 @@
 				285A18D219222389005CE96A /* DbViewController.m in Sources */,
 				285A193E19226CE0005CE96A /* LibraryPath.m in Sources */,
 				285A18CC19222389005CE96A /* DbAppDelegate.m in Sources */,
+				286A5297193664F40088C445 /* ActionQueries.m in Sources */,
 				28A8BF8A1924C073007DA022 /* Singleton.m in Sources */,
+				286A529A1936666B0088C445 /* Action.m in Sources */,
 				285A18F7192233EE005CE96A /* Database.m in Sources */,
 				285A18C819222389005CE96A /* main.m in Sources */,
 			);
@@ -329,9 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E1908F19373F530083B9C1 /* TestUtility.m in Sources */,
 				28A8BF9419252D98007DA022 /* QuerySqliteTest.m in Sources */,
 				285A194019226D11005CE96A /* LibraryPathTest.m in Sources */,
 				28A8BF8C1924C12C007DA022 /* SingletonTest.m in Sources */,
+				281C5F6A193628B400186376 /* ActionQueriesTest.m in Sources */,
 				285A18F419222565005CE96A /* DatabaseTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

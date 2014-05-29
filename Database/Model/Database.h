@@ -11,8 +11,8 @@
 
 
 @interface Database : NSObject
--(int)openSqliteDB:(sqlite3*)theDatabase at:(NSString*)targetPath;
--(int)closeSqliteDB:(sqlite3*)theDatabase;
++(int)openSqliteDB:(sqlite3*)theDatabase at:(NSString*)targetPath;
++(int)closeSqliteDB:(sqlite3*)theDatabase;
 
 
 

@@ -44,7 +44,7 @@
     NSString *targetPath = [LibraryPath getTargetPathTo:@"boo.sqlite"];
     
     //when
-    int outcome = [self.database openSqliteDB:databaseSQ at:targetPath];
+    int outcome = [Database openSqliteDB:databaseSQ at:targetPath];
     
     //then
     XCTAssertEqual(0, outcome, @"sqlite database not opened correctly");
@@ -58,7 +58,7 @@
     NSString *targetPath = [LibraryPath getTargetPathTo:@"boo.sqlite"];
     
     //when
-    [self.database openSqliteDB:databaseSQ at:targetPath];
+    [Database openSqliteDB:databaseSQ at:targetPath];
     BOOL file = [[NSFileManager defaultManager] fileExistsAtPath:targetPath];
     
     //then

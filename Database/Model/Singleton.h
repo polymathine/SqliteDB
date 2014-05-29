@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <sqlite3.h>
 
 
 @interface Singleton : NSObject
 
+@property (nonatomic) sqlite3 *mainDB;
+
 + (instancetype)sharedInstance;
+-(sqlite3*)retrieveDatabase;
 
 @end

@@ -10,6 +10,7 @@
 #import <sqlite3.h>
 
 @interface QuerySqlite : NSObject
--(int)runQuery:(NSString*)query on:(sqlite3*)database;
++(int)runQuery:(NSString*)query on:(sqlite3*)database;
++(NSMutableArray*)outcomesWhenRunQuery:(NSString*)query on:(sqlite3*)theDatabase;
 
 @end

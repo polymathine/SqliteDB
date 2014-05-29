@@ -7,16 +7,11 @@
 //
 
 #import "QuerySqlite.h"
-#import "Database.h"
 
-@interface QuerySqlite ()
-@property (nonatomic, retain) Database *dbObject;
-
-@end
 
 @implementation QuerySqlite
 
--(int)runQuery:(NSString*)query on:(sqlite3*)database
++(int)runQuery:(NSString*)query on:(sqlite3*)database
 {
     sqlite3_stmt *statementAdd;
     const char *update_stmt = [query UTF8String];
@@ -26,14 +21,35 @@
     if(outcome == SQLITE_OK)
     {
         outcome = (sqlite3_step(statementAdd));
-        sqlite3_finalize(statementAdd);
+        
     }
     else
     {
         NSLog(@"failed to add info to database, prepare stament did not work '%s'.", sqlite3_errmsg(database));
     }
+    sqlite3_finalize(statementAdd);
 
     return outcome;
+}
+
++(NSMutableArray*)outcomesWhenRunQuery:(NSString*)query on:(sqlite3*)theDatabase
+{
+    sqlite3_stmt    *statement;
+    NSMutableArray *selectedRecords = [NSMutableArray array];
+    
+    if (sqlite3_prepare_v2(theDatabase, [query UTF8String], -1, &statement, NULL) == SQLITE_OK)
+    {
+        while (sqlite3_step(statement) == SQLITE_ROW)
+        {
+            NSString *value = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 0) encoding:NSUTF8StringEncoding];
+            NSLog(@"value = %@", value);
+            [selectedRecords addObject:value];
+        }
+        sqlite3_finalize(statement);
+    }
+    else NSLog(@"sqlite query not implemented because %s", sqlite3_errmsg(theDatabase));
+    
+    return selectedRecords;
 }
 
 @end

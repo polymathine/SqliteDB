@@ -8,39 +8,54 @@
 
 #import <XCTest/XCTest.h>
 #import "QuerySqlite.h"
+#import "TestUtility.h"
 
 @interface QuerySqliteTest : XCTestCase
-@property (nonatomic, retain) QuerySqlite *querySqlite;
+@property (nonatomic) sqlite3 *testDB;
 @end
 
 @implementation QuerySqliteTest
-
 - (void)setUp
 {
     [super setUp];
-    self.querySqlite = [[QuerySqlite alloc] init];
+    self.testDB = [TestUtility getDummyDB];
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    self.querySqlite = nil;
+    [TestUtility closeTestDB:self.testDB];
     [super tearDown];
 }
 
--(void)testSqliteQueryRun
+
+#pragma mark - test methods
+-(void)testSqliteQueryFinishedExecuting
 {
     //given
-    NSString *theQuery = @"thequery";
-    sqlite3 *database;
+     NSString *theQuery =[NSString stringWithFormat: @"SELECT name FROM sqlite_master WHERE type = \'table\'"];
     
     //when
-    int i = [self.querySqlite runQuery:theQuery on:database];
+    int i = [QuerySqlite runQuery:theQuery on:self.testDB];
     
     //then
-    XCTAssertEqual(i, 101, @"query not run properly");
-    
+    XCTAssertEqual(i, 100, @"query not run properly");
 }
+
+-(void)testExpectedOutcomesWhenRunTableNamesQuery
+{
+    //given
+    NSString *theQuery =[NSString stringWithFormat: @"SELECT name FROM sqlite_master WHERE type = \'table\'"];
+    NSMutableArray *outcomes = [[NSMutableArray alloc] init];
+    
+    //when
+    outcomes = [QuerySqlite outcomesWhenRunQuery:theQuery on:self.testDB];
+    
+    //then
+    NSString *outcomeLast = [outcomes lastObject];
+    XCTAssertEqualObjects(outcomeLast, @"db_admin", @"last table name not as expected");
+}
+
+
 
 
 

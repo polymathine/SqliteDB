@@ -71,6 +71,13 @@
     XCTAssertNotEqual(s1, [self createUniqueInstance]);
 }
 
+/*- (void)testSingletonDatabaseVariableNotNil
+{
+    Singleton *s1 = [self getSharedInstance];
+   // NSLog(@"mainDB = %@", s1.mainDB);
+    XCTAssertEqualObjects(s1.mainDB, nil, @"sqlite3 DB property has not been initialised");
+}*/
+
 
 
 
