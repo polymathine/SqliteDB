@@ -32,7 +32,7 @@
     return outcome;
 }
 
-+(NSMutableArray*)outcomesWhenRunQuery:(NSString*)query on:(sqlite3*)theDatabase
++(NSMutableArray*)outcomesWhenRunQuery:(NSString*)query on:(sqlite3*)theDatabase using:(id<SqliteResultProcessor>)resultProcessor
 {
     sqlite3_stmt    *statement;
     NSMutableArray *selectedRecords = [NSMutableArray array];
@@ -41,8 +41,9 @@
     {
         while (sqlite3_step(statement) == SQLITE_ROW)
         {
-            NSString *value = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 0) encoding:NSUTF8StringEncoding];
-            NSLog(@"value = %@", value);
+            NSObject *value = [resultProcessor processResult:statement];
+//            NSString *value = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 0) encoding:NSUTF8StringEncoding];
+//            NSLog(@"value = %@", value);
             [selectedRecords addObject:value];
         }
         sqlite3_finalize(statement);

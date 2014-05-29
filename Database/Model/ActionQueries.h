@@ -9,7 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "Action.h"
 #import <sqlite3.h>
+#import "QuerySqlite.h"
+
+
+@interface ActionResultProcessor : NSObject <SqliteResultProcessor>
+-(Action*)processResult:(sqlite3_stmt*)statement;
+@end
 
 @interface ActionQueries : NSObject
 +(void)addAction:(Action*)action toDatabase:(sqlite3*)database;
++(Action*)getActionFromDatabase:(sqlite3*)database;
 @end

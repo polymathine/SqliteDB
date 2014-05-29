@@ -14,8 +14,8 @@
 {
     if ( (self = [super init]) )
     {
-        self.type = type;
-        self.timestamp = timestamp;
+        self.type_act = type;
+        self.timestamp_act = timestamp;
         self.worker_id = worker_id;
         self.supervisor_id = supervisor_id;
     }

@@ -7,15 +7,40 @@
 //
 
 #import "ActionQueries.h"
-#import "QuerySqlite.h"
+
+@implementation ActionResultProcessor
+-(Action*)processResult:(sqlite3_stmt*)statement {
+    NSString *type = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 0) encoding:NSUTF8StringEncoding];
+    NSString *timestamp = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 1) encoding:NSUTF8StringEncoding];
+       NSString *worker_id = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 2) encoding:NSUTF8StringEncoding];
+       NSString *supervisor_id = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 3) encoding:NSUTF8StringEncoding];
+    
+    Action *action = [[Action alloc] initType:type Timestamp:timestamp WorkerID:worker_id SupervisorID:supervisor_id];
+
+    return action;
+}
+@end
 
 @implementation ActionQueries
 
 +(void)addAction:(Action*)action toDatabase:(sqlite3*)database
 {
-    NSString *insertQuery = [NSString stringWithFormat:@"INSERT INTO action (type, timestamp, worker_id, supervisor_id) VALUES ('%@','%@','%@','%@' )", action.type, action.timestamp, action.worker_id, action.supervisor_id];
+    NSString *insertQuery = [NSString stringWithFormat:@"INSERT INTO action (type, timestamp, worker_id, supervisor_id) VALUES ('%@','%@','%@','%@' )", action.type_act, action.timestamp_act, action.worker_id, action.supervisor_id];
     
     [QuerySqlite runQuery:insertQuery on:database];
 }
 
++(Action*)getActionFromDatabase:(sqlite3*)database
+{
+    NSString *selectQuery = [NSString stringWithFormat:@"SELECT type, timestamp, worker_id, supervisor_id FROM action"];
+    
+        NSMutableArray *outcomes = [[NSMutableArray alloc] init];
+    outcomes = [QuerySqlite outcomesWhenRunQuery:selectQuery on:database
+                                           using: [[ActionResultProcessor alloc] init]];
+    
+    Action *action = [outcomes objectAtIndex:0];
+    return  action;
+}
+
 @end
+

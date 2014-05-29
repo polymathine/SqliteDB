@@ -12,8 +12,8 @@
 
 -(instancetype)initType:(NSString*)type Timestamp:(NSString*)timestamp WorkerID:(NSString*)worker_id SupervisorID:(NSString*)supervisor_id;
 
-@property (nonatomic, retain) NSString *type;
-@property (nonatomic, retain) NSString *timestamp;
+@property (nonatomic, retain) NSString *type_act;
+@property (nonatomic, retain) NSString *timestamp_act;
 @property (nonatomic, retain) NSString *worker_id;
 @property (nonatomic, retain) NSString *supervisor_id;
 @property (nonatomic) int _id;
