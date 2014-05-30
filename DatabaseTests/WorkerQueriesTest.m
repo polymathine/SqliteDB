@@ -41,28 +41,27 @@
     //given
     
     //when
-    //NSData *photo = [TestUtility create2kbRandomNSData];
     
     //then
     XCTAssertEqualObjects([self.worker firstname], @"foo", @"worker name not instantiated correctly");
     XCTAssertEqualObjects([self.worker rut], @"fooRut", @"worker rut not instantiated correctly");
-   // XCTAssertEqualObjects([self.worker photo], photo, @"photo data not instantiated correctly");
+    XCTAssertNotNil([self.worker photo], @"photo data not instantiated correctly");
  }
 
 - (void)testAddWorkerQueryOutcomeAsExpected
 {
     //given
-    
+
     //when
     [WorkerQueries addWorker:self.worker toDatabase:self.testDB];
     
-    //then
     NSMutableArray *outcomes = [[NSMutableArray alloc] init];
     outcomes = [QuerySqlite outcomesWhenRunQuery:self.getQuery on:self.testDB using:[[WorkerResultProcessor alloc] init]];
     
+    //then
     XCTAssertEqualObjects([[outcomes lastObject] firstname], @"foo", @"worker not added to sqlite table properly");
     XCTAssertEqualObjects([[outcomes lastObject] rut], @"fooRut", @"worker not added to sqlite table properly");
-    //XCTAssertEqualObjects([[outcomes lastObject] photo], [self.worker photo], @"worker not added to sqlite table properly");
+    XCTAssertNotNil([[outcomes lastObject] photo], @"worker photo not added to sqlite table properly");
 }
 
 -(void)testTwoWorkersAddedSuccesfully
@@ -96,6 +95,7 @@
     //then
     XCTAssertEqualObjects([workerTest firstname], [workerOutcome firstname], @"worker not retrieved from sqlite table correctly");
     XCTAssertEqualObjects([workerTest fathername], [workerOutcome fathername], @"worker not retrieved from sqlite table correctly");
+    XCTAssertNotNil([workerTest photo], @"worker photo not added to sqlite table properly");
 }
 
 -(void)testTwoWorkersGotFromDatabaseSuccesfully
@@ -103,13 +103,13 @@
     //given
     Worker *worker1 = [TestUtility getDummyWorker];
     Worker *worker2 = [TestUtility getDummyWorker];
-    
-    //when
     [WorkerQueries addWorker:worker1 toDatabase:self.testDB];
     [WorkerQueries addWorker:worker2 toDatabase:self.testDB];
     
-    //then
+    //when
     NSArray *outcomes = [WorkerQueries getWorkersFromDatabase:self.testDB];
+    
+    //then
     XCTAssertEqual([outcomes count], 2, @"workers not retrieved from sqlite table correctly");
 }
 

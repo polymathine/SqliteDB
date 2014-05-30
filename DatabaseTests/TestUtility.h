@@ -10,6 +10,8 @@
 #import <sqlite3.h>
 #import "Action.h"
 #import "Worker.h"
+#import "Photo.h"
+#import "CheckInOut.h"
 
 @interface TestUtility : NSObject
 
@@ -17,6 +19,8 @@
 +(void)closeTestDB:(sqlite3*)testDB;
 +(Action*)getDummyAction;
 +(Worker*)getDummyWorker;
-+(NSData*)create2kbRandomNSData;
++(Photo*)getDummyPhoto;
++(UIImage*)getDummyImage;
++(CheckInOut*)getDummyCheckIO;
 
 @end

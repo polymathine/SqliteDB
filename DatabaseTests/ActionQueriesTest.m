@@ -86,7 +86,6 @@
     XCTAssertEqualObjects([actionTest worker_id], [actionOutcome worker_id], @"action not retrieved from sqlite table correctly");
     XCTAssertEqualObjects([actionTest type_act], [actionOutcome type_act], @"action not retrieved from sqlite table correctly");
     XCTAssertEqualObjects([actionTest timestamp_act], [actionOutcome timestamp_act], @"action not retrieved from sqlite table correctly");
-    
 }
 
 -(void)testTwoActionsGotFromDatabaseSuccesfully

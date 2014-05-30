@@ -12,6 +12,7 @@
 
 -(Worker*)processResult:(sqlite3_stmt*)statement
 {
+    //extract each component of Worker object from worker table in sqlite file
     NSString *firstname = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 0) encoding:NSUTF8StringEncoding];
     NSString *mothername = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 1) encoding:NSUTF8StringEncoding];
     NSString *fathername = [NSString stringWithCString:(const char *)sqlite3_column_text(statement, 2) encoding:NSUTF8StringEncoding];
@@ -26,6 +27,7 @@
 @end
 
 @implementation WorkerQueries
+
 +(void)addWorker:(Worker*)worker toDatabase:(sqlite3*)database
 {
     NSString *insertQuery = [NSString stringWithFormat:@"INSERT INTO worker (first_name, mother_name, father_name, rut, transport, photo) VALUES ('%@','%@','%@','%@', '%@', '%@' )", worker.firstname, worker.mothername, worker.fathername, worker.rut, worker.transport, worker.photo];

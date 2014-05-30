@@ -7,7 +7,6 @@
 //
 
 #import "TestUtility.h"
-#import <stdlib.h>
 
 @implementation TestUtility
 
@@ -27,18 +26,36 @@
 }
 
 
-+(NSData*)create2kbRandomNSData
++(UIImage*)getDummyImage
 {
-    int twoKb           = 2097;
-    NSMutableData* theData = [NSMutableData dataWithCapacity:twoKb];
-    for( unsigned int i = 0 ; i < twoKb/4 ; ++i )
-    {
-        u_int32_t randomBits = arc4random();
-        [theData appendBytes:(void*)&randomBits length:4];
-    }
-    return theData;
+    NSString *imagePath = [self.class loadFixture:@"MayaAngelou" ofType:@"jpg"];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+    
+    return image;
 }
 
++(NSData*)getDummyPhotoData
+{
+    UIImage *image = [TestUtility getDummyImage];
+    NSData *reducedImage = [Photo getReducedDataForImage:image];
+    
+    return reducedImage;
+}
+
+
++(Photo*)getDummyPhoto
+{
+    Photo *photo = [[Photo alloc] initWithData:[self.class getDummyPhotoData]];
+    
+    return photo;
+}
+
++(CheckInOut*)getDummyCheckIO
+{
+    CheckInOut *checkio = [[CheckInOut alloc] initType:@"foo" Timestamp:@"fooTime" WorkerID:@"fooWorker" SupervisorID:@"fooSupervisor"];
+    
+    return checkio;
+}
 
 +(Action*)getDummyAction
 {
@@ -49,7 +66,7 @@
 
 +(Worker*)getDummyWorker
 {
-    Worker *worker = [[Worker alloc] initWorkerNameFirst:@"foo" Mother:@"fooMom" Father:@"fooDad" RUT:@"fooRut" Transport:@"fooTrans" andPhoto:[self.class create2kbRandomNSData]];
+    Worker *worker = [[Worker alloc] initWorkerNameFirst:@"foo" Mother:@"fooMom" Father:@"fooDad" RUT:@"fooRut" Transport:@"fooTrans" andPhoto:[self.class getDummyPhotoData]];
     
     return worker;
 }

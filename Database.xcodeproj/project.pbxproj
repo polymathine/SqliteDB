@@ -34,6 +34,12 @@
 		28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9119252A40007DA022 /* DBSingleton.m */; };
 		28A8BF9419252D98007DA022 /* QuerySqliteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9319252D98007DA022 /* QuerySqliteTest.m */; };
 		28A8BF9719252DC1007DA022 /* QuerySqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9619252DC1007DA022 /* QuerySqlite.m */; };
+		28A9F3DA193890B800A3A7DC /* MayaAngelou.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28A9F3D9193890B800A3A7DC /* MayaAngelou.jpg */; };
+		28A9F3DC193898DD00A3A7DC /* CheckInOutQueriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F3DB193898DD00A3A7DC /* CheckInOutQueriesTest.m */; };
+		28A9F3DF19389BCE00A3A7DC /* CheckInOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F3DE19389BCE00A3A7DC /* CheckInOut.m */; };
+		28A9F3E519389E8D00A3A7DC /* CheckInOutQueries.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F3E419389E8D00A3A7DC /* CheckInOutQueries.m */; };
+		28C66C5D193881B900A3F9D5 /* PhotoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C66C5C193881B900A3F9D5 /* PhotoTest.m */; };
+		28C66C601938836300A3F9D5 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C66C5F1938836300A3F9D5 /* Photo.m */; };
 		28E1908F19373F530083B9C1 /* TestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E1908E19373F530083B9C1 /* TestUtility.m */; };
 		28E19095193781530083B9C1 /* WorkerQueriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E19094193781530083B9C1 /* WorkerQueriesTest.m */; };
 		28E19098193781E70083B9C1 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E19097193781E70083B9C1 /* Worker.m */; };
@@ -90,6 +96,15 @@
 		28A8BF9319252D98007DA022 /* QuerySqliteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySqliteTest.m; sourceTree = "<group>"; };
 		28A8BF9519252DC1007DA022 /* QuerySqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuerySqlite.h; path = Database/Model/QuerySqlite.h; sourceTree = SOURCE_ROOT; };
 		28A8BF9619252DC1007DA022 /* QuerySqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuerySqlite.m; path = Database/Model/QuerySqlite.m; sourceTree = SOURCE_ROOT; };
+		28A9F3D9193890B800A3A7DC /* MayaAngelou.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MayaAngelou.jpg; sourceTree = "<group>"; };
+		28A9F3DB193898DD00A3A7DC /* CheckInOutQueriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInOutQueriesTest.m; sourceTree = "<group>"; };
+		28A9F3DD19389BCE00A3A7DC /* CheckInOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckInOut.h; path = Database/Model/CheckInOut.h; sourceTree = SOURCE_ROOT; };
+		28A9F3DE19389BCE00A3A7DC /* CheckInOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckInOut.m; path = Database/Model/CheckInOut.m; sourceTree = SOURCE_ROOT; };
+		28A9F3E319389E8D00A3A7DC /* CheckInOutQueries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckInOutQueries.h; path = Database/Model/CheckInOutQueries.h; sourceTree = SOURCE_ROOT; };
+		28A9F3E419389E8D00A3A7DC /* CheckInOutQueries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckInOutQueries.m; path = Database/Model/CheckInOutQueries.m; sourceTree = SOURCE_ROOT; };
+		28C66C5C193881B900A3F9D5 /* PhotoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTest.m; sourceTree = "<group>"; };
+		28C66C5E1938836300A3F9D5 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Database/Model/Photo.h; sourceTree = SOURCE_ROOT; };
+		28C66C5F1938836300A3F9D5 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Database/Model/Photo.m; sourceTree = SOURCE_ROOT; };
 		28E1908D19373F530083B9C1 /* TestUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtility.h; sourceTree = "<group>"; };
 		28E1908E19373F530083B9C1 /* TestUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUtility.m; sourceTree = "<group>"; };
 		28E19094193781530083B9C1 /* WorkerQueriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkerQueriesTest.m; sourceTree = "<group>"; };
@@ -188,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				281C5F69193628B400186376 /* ActionQueriesTest.m */,
+				28C66C5C193881B900A3F9D5 /* PhotoTest.m */,
+				28A9F3DB193898DD00A3A7DC /* CheckInOutQueriesTest.m */,
 				28E19094193781530083B9C1 /* WorkerQueriesTest.m */,
 				285A18E119222389005CE96A /* Supporting Files */,
 				285A18F319222565005CE96A /* DatabaseTest.m */,
@@ -203,6 +220,7 @@
 		285A18E119222389005CE96A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28A9F3D9193890B800A3A7DC /* MayaAngelou.jpg */,
 				28E1909F1937888C0083B9C1 /* testDB.sqlite */,
 				285A18E219222389005CE96A /* DatabaseTests-Info.plist */,
 				285A18E319222389005CE96A /* InfoPlist.strings */,
@@ -213,10 +231,11 @@
 		285A18F0192223D0005CE96A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				28A9F3E61938BE0B00A3A7DC /* CheckInOut */,
 				28E1909119377EB10083B9C1 /* Action */,
+				28E1909C193784370083B9C1 /* Worker */,
 				28E1909219377ED10083B9C1 /* Database */,
 				28E1909319377EF00083B9C1 /* Sqlite */,
-				28E1909C193784370083B9C1 /* Worker */,
 			);
 			name = Model;
 			path = /Users/abby/Database/Database/Model;
@@ -239,6 +258,17 @@
 			name = Controller;
 			path = /Users/abby/Database/Database/Controller;
 			sourceTree = "<absolute>";
+		};
+		28A9F3E61938BE0B00A3A7DC /* CheckInOut */ = {
+			isa = PBXGroup;
+			children = (
+				28A9F3E319389E8D00A3A7DC /* CheckInOutQueries.h */,
+				28A9F3E419389E8D00A3A7DC /* CheckInOutQueries.m */,
+				28A9F3DD19389BCE00A3A7DC /* CheckInOut.h */,
+				28A9F3DE19389BCE00A3A7DC /* CheckInOut.m */,
+			);
+			name = CheckInOut;
+			sourceTree = "<group>";
 		};
 		28E1909119377EB10083B9C1 /* Action */ = {
 			isa = PBXGroup;
@@ -276,6 +306,8 @@
 		28E1909C193784370083B9C1 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
+				28C66C5E1938836300A3F9D5 /* Photo.h */,
+				28C66C5F1938836300A3F9D5 /* Photo.m */,
 				28E19096193781E70083B9C1 /* Worker.h */,
 				28E19097193781E70083B9C1 /* Worker.m */,
 				28E19099193784300083B9C1 /* WorkerQueries.h */,
@@ -372,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				285A18E519222389005CE96A /* InfoPlist.strings in Resources */,
+				28A9F3DA193890B800A3A7DC /* MayaAngelou.jpg in Resources */,
 				28E190A01937888C0083B9C1 /* testDB.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,13 +416,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A9F3DF19389BCE00A3A7DC /* CheckInOut.m in Sources */,
 				28A8BF9719252DC1007DA022 /* QuerySqlite.m in Sources */,
 				28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */,
 				28E1909B193784300083B9C1 /* WorkerQueries.m in Sources */,
 				285A18D219222389005CE96A /* DbViewController.m in Sources */,
+				28C66C601938836300A3F9D5 /* Photo.m in Sources */,
 				285A193E19226CE0005CE96A /* LibraryPath.m in Sources */,
 				285A18CC19222389005CE96A /* DbAppDelegate.m in Sources */,
 				286A5297193664F40088C445 /* ActionQueries.m in Sources */,
+				28A9F3E519389E8D00A3A7DC /* CheckInOutQueries.m in Sources */,
 				28E19098193781E70083B9C1 /* Worker.m in Sources */,
 				28A8BF8A1924C073007DA022 /* Singleton.m in Sources */,
 				286A529A1936666B0088C445 /* Action.m in Sources */,
@@ -402,6 +438,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A9F3DC193898DD00A3A7DC /* CheckInOutQueriesTest.m in Sources */,
+				28C66C5D193881B900A3F9D5 /* PhotoTest.m in Sources */,
 				28E1908F19373F530083B9C1 /* TestUtility.m in Sources */,
 				28A8BF9419252D98007DA022 /* QuerySqliteTest.m in Sources */,
 				285A194019226D11005CE96A /* LibraryPathTest.m in Sources */,
