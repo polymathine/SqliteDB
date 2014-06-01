@@ -7,17 +7,9 @@
 //
 
 #import "Photo.h"
+#import "QuerySqlite.h"
 
 @implementation Photo
-
--(id)initWithData:(NSData*)photoData
-{
-    if ( (self = [super init]) )
-    {
-        self.photoData = photoData;
-    }
-    return self;
-}
 
 +(NSData*)getReducedDataForImage:(UIImage*)image
 {
@@ -39,6 +31,15 @@
     
     //return compressed image as NSData object
     return imageData;
+}
+
+//need test for this!!
++(void)addPhoto:(UIImage*)image forRut:(NSString*)rut inDatabase:(sqlite3*)database
+{
+    NSData *photo = [self getReducedDataForImage:image];
+    NSString *insertQuery = [NSString stringWithFormat:@"UPDATE worker SET photo='%@', photo_synced='0' WHERE rut='%@'",photo, rut];
+    
+    [QuerySqlite runQuery:insertQuery on:database];
 }
 
 

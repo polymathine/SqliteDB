@@ -28,7 +28,7 @@
     [super tearDown];
 }
 
-- (void)testPhotoDataNotNilWhenInstantiated
+/*- (void)testPhotoDataNotNilWhenInstantiated
 {
     //given
 
@@ -38,7 +38,7 @@
     //then
     XCTAssertNotNil(photo1, @"photo not instantiated correctly");
     
-}
+}*/
 
 -(void)testDataFromImageConversionNotNil
 {

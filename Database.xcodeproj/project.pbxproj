@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		281C5F6A193628B400186376 /* ActionQueriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C5F69193628B400186376 /* ActionQueriesTest.m */; };
+		282B5AF4193A37DA0054190E /* PhotoVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 282B5AF3193A37DA0054190E /* PhotoVM.m */; };
 		285A18BC19222389005CE96A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A18BB19222389005CE96A /* Foundation.framework */; };
 		285A18BE19222389005CE96A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A18BD19222389005CE96A /* CoreGraphics.framework */; };
 		285A18C019222389005CE96A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A18BF19222389005CE96A /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 		28A9F3DC193898DD00A3A7DC /* CheckInOutQueriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F3DB193898DD00A3A7DC /* CheckInOutQueriesTest.m */; };
 		28A9F3DF19389BCE00A3A7DC /* CheckInOut.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F3DE19389BCE00A3A7DC /* CheckInOut.m */; };
 		28A9F3E519389E8D00A3A7DC /* CheckInOutQueries.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F3E419389E8D00A3A7DC /* CheckInOutQueries.m */; };
+		28A9F3E91938C16E00A3A7DC /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F3E81938C16E00A3A7DC /* PhotoViewController.m */; };
+		28A9F3EC1938C3AC00A3A7DC /* CameraVCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F3EB1938C3AC00A3A7DC /* CameraVCDelegate.m */; };
 		28C66C5D193881B900A3F9D5 /* PhotoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C66C5C193881B900A3F9D5 /* PhotoTest.m */; };
 		28C66C601938836300A3F9D5 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C66C5F1938836300A3F9D5 /* Photo.m */; };
 		28E1908F19373F530083B9C1 /* TestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E1908E19373F530083B9C1 /* TestUtility.m */; };
@@ -59,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		281C5F69193628B400186376 /* ActionQueriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionQueriesTest.m; sourceTree = "<group>"; };
+		282B5AF2193A37DA0054190E /* PhotoVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoVM.h; path = Database/Controller/PhotoVM.h; sourceTree = SOURCE_ROOT; };
+		282B5AF3193A37DA0054190E /* PhotoVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoVM.m; path = Database/Controller/PhotoVM.m; sourceTree = SOURCE_ROOT; };
 		285A18B819222389005CE96A /* Database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Database.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		285A18BB19222389005CE96A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		285A18BD19222389005CE96A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -102,6 +107,10 @@
 		28A9F3DE19389BCE00A3A7DC /* CheckInOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckInOut.m; path = Database/Model/CheckInOut.m; sourceTree = SOURCE_ROOT; };
 		28A9F3E319389E8D00A3A7DC /* CheckInOutQueries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckInOutQueries.h; path = Database/Model/CheckInOutQueries.h; sourceTree = SOURCE_ROOT; };
 		28A9F3E419389E8D00A3A7DC /* CheckInOutQueries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckInOutQueries.m; path = Database/Model/CheckInOutQueries.m; sourceTree = SOURCE_ROOT; };
+		28A9F3E71938C16E00A3A7DC /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = Database/Controller/PhotoViewController.h; sourceTree = SOURCE_ROOT; };
+		28A9F3E81938C16E00A3A7DC /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = Database/Controller/PhotoViewController.m; sourceTree = SOURCE_ROOT; };
+		28A9F3EA1938C3AC00A3A7DC /* CameraVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraVCDelegate.h; path = Database/Controller/CameraVCDelegate.h; sourceTree = SOURCE_ROOT; };
+		28A9F3EB1938C3AC00A3A7DC /* CameraVCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraVCDelegate.m; path = Database/Controller/CameraVCDelegate.m; sourceTree = SOURCE_ROOT; };
 		28C66C5C193881B900A3F9D5 /* PhotoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTest.m; sourceTree = "<group>"; };
 		28C66C5E1938836300A3F9D5 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Database/Model/Photo.h; sourceTree = SOURCE_ROOT; };
 		28C66C5F1938836300A3F9D5 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Database/Model/Photo.m; sourceTree = SOURCE_ROOT; };
@@ -141,6 +150,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		282B5AEE193A37570054190E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				282B5AF2193A37DA0054190E /* PhotoVM.h */,
+				282B5AF3193A37DA0054190E /* PhotoVM.m */,
+			);
+			name = ViewModel;
+			path = ../../Database/Database/Controller;
+			sourceTree = "<group>";
+		};
 		285A18AF19222389005CE96A = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +194,7 @@
 		285A18C119222389005CE96A /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				282B5AEE193A37570054190E /* ViewModel */,
 				285A18F2192223E0005CE96A /* Controller */,
 				285A18F1192223D5005CE96A /* View */,
 				285A18F0192223D0005CE96A /* Model */,
@@ -252,8 +272,12 @@
 		285A18F2192223E0005CE96A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				28A9F3E71938C16E00A3A7DC /* PhotoViewController.h */,
+				28A9F3E81938C16E00A3A7DC /* PhotoViewController.m */,
 				285A18D019222389005CE96A /* DbViewController.h */,
 				285A18D119222389005CE96A /* DbViewController.m */,
+				28A9F3EA1938C3AC00A3A7DC /* CameraVCDelegate.h */,
+				28A9F3EB1938C3AC00A3A7DC /* CameraVCDelegate.m */,
 			);
 			name = Controller;
 			path = /Users/abby/Database/Database/Controller;
@@ -419,12 +443,15 @@
 				28A9F3DF19389BCE00A3A7DC /* CheckInOut.m in Sources */,
 				28A8BF9719252DC1007DA022 /* QuerySqlite.m in Sources */,
 				28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */,
+				282B5AF4193A37DA0054190E /* PhotoVM.m in Sources */,
 				28E1909B193784300083B9C1 /* WorkerQueries.m in Sources */,
 				285A18D219222389005CE96A /* DbViewController.m in Sources */,
 				28C66C601938836300A3F9D5 /* Photo.m in Sources */,
+				28A9F3EC1938C3AC00A3A7DC /* CameraVCDelegate.m in Sources */,
 				285A193E19226CE0005CE96A /* LibraryPath.m in Sources */,
 				285A18CC19222389005CE96A /* DbAppDelegate.m in Sources */,
 				286A5297193664F40088C445 /* ActionQueries.m in Sources */,
+				28A9F3E91938C16E00A3A7DC /* PhotoViewController.m in Sources */,
 				28A9F3E519389E8D00A3A7DC /* CheckInOutQueries.m in Sources */,
 				28E19098193781E70083B9C1 /* Worker.m in Sources */,
 				28A8BF8A1924C073007DA022 /* Singleton.m in Sources */,

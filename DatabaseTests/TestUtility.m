@@ -43,13 +43,6 @@
 }
 
 
-+(Photo*)getDummyPhoto
-{
-    Photo *photo = [[Photo alloc] initWithData:[self.class getDummyPhotoData]];
-    
-    return photo;
-}
-
 +(CheckInOut*)getDummyCheckIO
 {
     CheckInOut *checkio = [[CheckInOut alloc] initType:@"foo" Timestamp:@"fooTime" WorkerID:@"fooWorker" SupervisorID:@"fooSupervisor"];

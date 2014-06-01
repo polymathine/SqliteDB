@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Worker.h"
+#import <sqlite3.h>
 
 @interface Photo : NSObject
-@property (nonatomic, retain) NSData *photoData;
 
--(id)initWithData:(NSData*)photoData;
 +(NSData*)getReducedDataForImage:(UIImage*)image;
++(void)addPhoto:(UIImage*)image forRut:(NSString*)rut inDatabase:(sqlite3*)database;
 
 @end

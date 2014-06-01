@@ -46,4 +46,13 @@
     return  workers;
 }
 
++(Worker*)getWorker:(NSString*)rut fromDatabase:(sqlite3*)database
+{
+    NSString *selectQuery = [NSString stringWithFormat:@"SELECT first_name, mother_name, father_name, rut, transport, photo FROM worker WHERE rut = '%@'", rut];
+    
+    Worker *outcome = [[QuerySqlite outcomesWhenRunQuery:selectQuery on:database using: [[WorkerResultProcessor alloc] init]] lastObject];
+    
+    return  outcome;
+}
+
 @end

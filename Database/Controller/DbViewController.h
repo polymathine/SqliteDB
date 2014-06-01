@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface DbViewController : UIViewController
+-(IBAction)goToPhotoViewController;
+@property (strong, nonatomic) IBOutlet UITextField *workerText;
 
 @end

@@ -19,7 +19,6 @@
 +(void)closeTestDB:(sqlite3*)testDB;
 +(Action*)getDummyAction;
 +(Worker*)getDummyWorker;
-+(Photo*)getDummyPhoto;
 +(UIImage*)getDummyImage;
 +(CheckInOut*)getDummyCheckIO;
 

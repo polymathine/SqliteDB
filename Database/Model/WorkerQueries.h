@@ -18,5 +18,6 @@
 @interface WorkerQueries : NSObject
 +(void)addWorker:(Worker*)worker toDatabase:(sqlite3*)database;
 +(NSArray*)getWorkersFromDatabase:(sqlite3*)database;
++(Worker*)getWorker:(NSString*)rut fromDatabase:(sqlite3*)database;
 
 @end

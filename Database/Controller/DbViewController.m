@@ -7,6 +7,7 @@
 //
 
 #import "DbViewController.h"
+#import "PhotoViewController.h"
 
 @interface DbViewController ()
 
@@ -25,5 +26,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(IBAction)goToPhotoViewController
+{
+    [self performSegueWithIdentifier:@"photoSegue" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"photoSegue"])
+    {
+        // Get reference to the destination view controller
+        PhotoViewController *vc = [segue destinationViewController];
+        //pass rut to destination vc
+        vc.rut = self.workerText.text;
+    }
+}
+
 
 @end
