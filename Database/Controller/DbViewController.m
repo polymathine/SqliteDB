@@ -8,8 +8,10 @@
 
 #import "DbViewController.h"
 #import "PhotoViewController.h"
+#import "ActionVM.h"
 
 @interface DbViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *actionText;
 
 @end
 
@@ -30,6 +32,11 @@
 -(IBAction)goToPhotoViewController
 {
     [self performSegueWithIdentifier:@"photoSegue" sender:self];
+}
+
+-(IBAction)addAction:(id)sender
+{
+    [ActionVM saveAction:self.actionText.text toRut:self.workerText.text];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -37,7 +37,8 @@
 +(void)addPhoto:(UIImage*)image forRut:(NSString*)rut inDatabase:(sqlite3*)database
 {
     NSData *photo = [self getReducedDataForImage:image];
-    NSString *insertQuery = [NSString stringWithFormat:@"UPDATE worker SET photo='%@', photo_synced='0' WHERE rut='%@'",photo, rut];
+    NSString *insertQuery = [NSString stringWithFormat:@"UPDATE worker SET photo='%@' WHERE rut='%@'",photo, rut];
+    //, photo_synced='0'
     
     [QuerySqlite runQuery:insertQuery on:database];
 }

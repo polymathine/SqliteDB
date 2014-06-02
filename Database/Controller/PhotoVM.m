@@ -14,6 +14,7 @@
 
 +(void)savePhoto:(UIImage*)photo toRut:(NSString*)rut
 {
+    NSLog(@"rut is %@", rut);
     sqlite3 *database = [[Singleton sharedInstance] retrieveDatabase];
     [Photo addPhoto:photo forRut:rut inDatabase:database];
 }

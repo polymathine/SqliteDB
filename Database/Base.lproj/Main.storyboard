@@ -57,12 +57,16 @@
                                 <state key="normal" title="Add Action">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FTD-7G-8qz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="TRm-f9-Nuk"/>
                     <connections>
+                        <outlet property="actionText" destination="JQ9-hB-PeB" id="L6X-px-CII"/>
                         <outlet property="workerText" destination="gxH-EG-GvJ" id="0ac-57-8Ej"/>
                         <segue destination="jPr-HO-7Zv" kind="push" identifier="photoSegue" id="Ijw-AM-n9d"/>
                     </connections>

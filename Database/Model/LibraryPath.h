@@ -12,6 +12,4 @@
 +(NSString*)getLibraryPath;
 +(NSString*)getTargetPathTo:(NSString*)filename;
 
-
-
 @end

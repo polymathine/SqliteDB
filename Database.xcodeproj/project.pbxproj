@@ -30,6 +30,8 @@
 		286A5297193664F40088C445 /* ActionQueries.m in Sources */ = {isa = PBXBuildFile; fileRef = 286A5296193664F40088C445 /* ActionQueries.m */; };
 		286A529A1936666B0088C445 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 286A52991936666B0088C445 /* Action.m */; };
 		28789AD81922770000945869 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28789AD71922770000945869 /* libsqlite3.0.dylib */; };
+		287A19B0193C86B20024A860 /* ActionVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A19AF193C86B20024A860 /* ActionVM.m */; };
+		287A19B5193C8C7A0024A860 /* mainDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 287A19B4193C8C7A0024A860 /* mainDB.sqlite */; };
 		28A8BF8A1924C073007DA022 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF891924C073007DA022 /* Singleton.m */; };
 		28A8BF8C1924C12C007DA022 /* SingletonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF8B1924C12C007DA022 /* SingletonTest.m */; };
 		28A8BF9219252A40007DA022 /* DBSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A8BF9119252A40007DA022 /* DBSingleton.m */; };
@@ -93,6 +95,9 @@
 		286A52981936666B0088C445 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Action.h; path = Database/Model/Action.h; sourceTree = SOURCE_ROOT; };
 		286A52991936666B0088C445 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Action.m; path = Database/Model/Action.m; sourceTree = SOURCE_ROOT; };
 		28789AD71922770000945869 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		287A19AE193C86B20024A860 /* ActionVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionVM.h; path = Database/Controller/ActionVM.h; sourceTree = SOURCE_ROOT; };
+		287A19AF193C86B20024A860 /* ActionVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionVM.m; path = Database/Controller/ActionVM.m; sourceTree = SOURCE_ROOT; };
+		287A19B4193C8C7A0024A860 /* mainDB.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mainDB.sqlite; sourceTree = "<group>"; };
 		28A8BF881924C073007DA022 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = Database/Model/Singleton.h; sourceTree = SOURCE_ROOT; };
 		28A8BF891924C073007DA022 /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Singleton.m; path = Database/Model/Singleton.m; sourceTree = SOURCE_ROOT; };
 		28A8BF8B1924C12C007DA022 /* SingletonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonTest.m; sourceTree = "<group>"; };
@@ -155,6 +160,8 @@
 			children = (
 				282B5AF2193A37DA0054190E /* PhotoVM.h */,
 				282B5AF3193A37DA0054190E /* PhotoVM.m */,
+				287A19AE193C86B20024A860 /* ActionVM.h */,
+				287A19AF193C86B20024A860 /* ActionVM.m */,
 			);
 			name = ViewModel;
 			path = ../../Database/Database/Controller;
@@ -208,6 +215,7 @@
 			children = (
 				28A8BF9019252A40007DA022 /* DBSingleton.h */,
 				28A8BF9119252A40007DA022 /* DBSingleton.m */,
+				287A19B4193C8C7A0024A860 /* mainDB.sqlite */,
 				285A18D319222389005CE96A /* Images.xcassets */,
 				285A18CA19222389005CE96A /* DbAppDelegate.h */,
 				285A18CB19222389005CE96A /* DbAppDelegate.m */,
@@ -417,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287A19B5193C8C7A0024A860 /* mainDB.sqlite in Resources */,
 				285A18D419222389005CE96A /* Images.xcassets in Resources */,
 				285A18C619222389005CE96A /* InfoPlist.strings in Resources */,
 				285A18CF19222389005CE96A /* Main.storyboard in Resources */,
@@ -453,6 +462,7 @@
 				286A5297193664F40088C445 /* ActionQueries.m in Sources */,
 				28A9F3E91938C16E00A3A7DC /* PhotoViewController.m in Sources */,
 				28A9F3E519389E8D00A3A7DC /* CheckInOutQueries.m in Sources */,
+				287A19B0193C86B20024A860 /* ActionVM.m in Sources */,
 				28E19098193781E70083B9C1 /* Worker.m in Sources */,
 				28A8BF8A1924C073007DA022 /* Singleton.m in Sources */,
 				286A529A1936666B0088C445 /* Action.m in Sources */,

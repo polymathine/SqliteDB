@@ -33,6 +33,22 @@
         //copy database file to iPhone directory
         NSString *databasePath = [LibraryPath getTargetPathTo:@"/mainDB.sqlite"];
         
+
+        
+      /* only use this when need to insert new database structure from supporting files
+       NSError *err;
+        //first get rid of any database that already exists here
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if( [fileManager fileExistsAtPath:databasePath])
+        {[fileManager removeItemAtPath:databasePath error:&err];
+            NSLog(@"error: %@", err.description);
+        }
+        //get copy of database file direct from resources folder - i.e manually added database
+        NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"mainDB.sqlite"];
+        [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:&err];
+        NSLog(@"error: %@", err.description);*/
+        
+        
         const char *dbPath = [databasePath UTF8String];
         sqlite3 *theDatabase;
         
@@ -56,5 +72,6 @@
 {
     return self.mainDB;
 }
+
 
 @end
